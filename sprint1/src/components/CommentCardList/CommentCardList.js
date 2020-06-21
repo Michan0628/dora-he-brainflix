@@ -11,7 +11,6 @@ export default class CommentCardList extends Component {
   }
   componentDidMount() {
     axios.get("./data.json").then((res) => {
-      console.log(res.data.mainVideo.comments);
       this.setState({ comments: res.data.mainVideo.comments });
     });
   }

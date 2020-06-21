@@ -14,7 +14,6 @@ export default class VideoCardList extends Component {
 componentDidMount(){
   axios.get('./data.json')
   .then(res => {
-      console.log(res.data.sideVideos)
       this.setState({sideVideos: res.data.sideVideos})
   })
 }

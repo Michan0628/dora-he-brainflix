@@ -12,7 +12,6 @@ export default class DescriptionCard extends Component {
   }
   componentDidMount() {
     axios.get("./data.json").then((res) => {
-      console.log(res.data.mainVideo);
       this.setState({ description: res.data.mainVideo});
     });
   }
