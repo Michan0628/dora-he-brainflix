@@ -3,26 +3,41 @@
 .videoSection {
   @include mobile-padding;
   
-  &__header {
+  @include tablet{
+    @include tablet-padding;
+  }
 
+  @include desktop{
+    @include desktop-padding;
+  }
+  
+  &__header {
     border-bottom: 1px solid $card-border;
     padding: 2em 0;
-    
 
     &-title {
       font-size: 2.5rem;
-    line-height: 3.5rem;
-
+      line-height: 3.5rem;
+      @include tablet{
+        font-size: 3rem;
+      }
+    }
+    @include tablet{
+      &-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-right: 2em;
+      }
     }
 
     &-publish {
       display: flex;
-    }
-
-    &-publish {
       font-size: 1.5rem;
       margin: 1em 0;
     }
+
+
   }
   &__channel {
     font-weight: 600;
@@ -51,10 +66,15 @@
       background-position: 0px 10px;
     }
   }
-//   DESCRIPTION
+  //   DESCRIPTION
   &__body {
-    padding:2em 0;
-    font-size:1.2rem;
+    padding: 2em 0;
+    font-size: 1.2rem;
     line-height: 2rem;
+    @include tablet{
+      padding:2em 12em 2em 0;
+      font-size:1.5rem;
+      line-height: 2.5rem;
+    }
   }
 }

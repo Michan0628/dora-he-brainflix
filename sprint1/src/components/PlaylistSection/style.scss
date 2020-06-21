@@ -2,6 +2,12 @@
 
 .playlist {
   @include mobile-padding;
+
+  @include tablet{
+    @include tablet-padding;
+    padding-right: 40em;
+  }
+
   &__title{
       margin:2em 0 1.5em 0;
       font-size: 1.3em;

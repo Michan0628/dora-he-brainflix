@@ -6,14 +6,20 @@
     margin: 0.5em 0;
     padding:1em 0;
     height: 15vh;
+    @include tablet{
+        height:9vh;
+    }
     &__thumbnail{
         height: 100%;
         width: 40%;
         border-radius: 5px;
         background-color: darkslateblue;
-        // overflow: hidden;
         object-fit: cover;
         
+        @include tablet{
+            width: 35%;
+        }
+
         &:hover{
             box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
         }
@@ -21,17 +27,18 @@
 
 
     &__body{
-        width: 55%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        @include tablet{
+            justify-content: space-evenly;
+        }
     }
 
     &__title{
         font-size: 1.5rem;
         font-weight: 600;
-        // background-color: darkslateblue;
         height: 60%;
         overflow:hidden;
 
