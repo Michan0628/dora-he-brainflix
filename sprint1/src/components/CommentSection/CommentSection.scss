@@ -1,0 +1,25 @@
+@import "../../styles/styles.scss";
+
+.commentSection {
+  @include mobile-padding;
+  &__title {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  &__formSection{
+      display: flex;
+      justify-content: space-between;
+      border-bottom:1px solid $card-border;
+      padding:2em 0;
+
+  }
+  &__avatar {
+
+    position: relative;
+    top:2em;
+  }
+
+  &__form {
+    width: 75%;
+  }
+}

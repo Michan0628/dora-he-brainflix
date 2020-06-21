@@ -1,0 +1,55 @@
+@import "../../styles/styles.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  @include mobile-padding;
+  &__left {
+    width: 100%;
+    text-align: center;
+    padding: 1.5em 0;
+  }
+  &__logo {
+    width: 13em;
+  }
+  &__right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & > * {
+      margin: 0.5em 0;
+    }
+  }
+  &__form {
+    width: 100%;
+    text-align: center;
+  }
+  &__search {
+    padding: 15px 35px;
+    font-family: $global-font;
+    font-size: 15px;
+    border: 1px solid $card-border;
+    border-radius: 5px;
+    width: 100%;
+    background: $secondary-background-color;
+    background-image: url(./assets/Icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+  }
+  &__button {
+    padding: 1em 0em 1em 2em;
+    background-image: url(./assets/Icon-upload.svg);
+    background-position: 70px 18px;
+    background-repeat: no-repeat;
+    width: 75%;
+  }
+  &__avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-image: url(./assets/Mohan-muruge.jpg);
+    background-size: cover;
+  }
+}

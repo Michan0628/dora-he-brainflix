@@ -1,0 +1,34 @@
+@import "../../styles/styles.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    color: $text-subtitle-color;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  &__input {
+      width: 100%;
+      border: 2px solid $card-border;
+      background-color: $secondary-background-color;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      resize: none;
+      padding: 1rem 1rem 6rem;
+      &:focus {
+        border: 2px solid $primary-background-color;
+        outline: none;
+      }
+      &::placeholder {
+        color: $font-color;
+        font: 1.3rem $global-font;
+      }
+  
+    }
+    &__submit{
+        width: 100%;
+    }
+}
+

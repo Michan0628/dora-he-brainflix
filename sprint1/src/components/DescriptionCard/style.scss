@@ -1,0 +1,60 @@
+@import "../../styles/styles.scss";
+
+.videoSection {
+  @include mobile-padding;
+  
+  &__header {
+
+    border-bottom: 1px solid $card-border;
+    padding: 2em 0;
+    
+
+    &-title {
+      font-size: 2.5rem;
+    line-height: 3.5rem;
+
+    }
+
+    &-publish {
+      display: flex;
+    }
+
+    &-publish {
+      font-size: 1.5rem;
+      margin: 1em 0;
+    }
+  }
+  &__channel {
+    font-weight: 600;
+    margin-right: 0.5em;
+  }
+
+  &__time {
+    color: $text-subtitle-color;
+  }
+  // LIKES AND VIEWS
+  &__stats {
+    display: flex;
+    font-size: 1.5rem;
+
+    &-views {
+      margin-right: 1em;
+      padding: 0.5em 0 0.5em 2em;
+      background-image: url(./assets/Icon-views.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 10px;
+    }
+    &-likes {
+      padding: 0.5em 0 0.5em 2em;
+      background-image: url(./assets/Icon-likes.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 10px;
+    }
+  }
+//   DESCRIPTION
+  &__body {
+    padding:2em 0;
+    font-size:1.2rem;
+    line-height: 2rem;
+  }
+}

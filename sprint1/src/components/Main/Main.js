@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DescriptionCard from '../DescriptionCard/DescriptionCard'
 import CommentSection from '../CommentSection/CommentSection'
-import Playlist from '../Playlist/Playlist'
+import PlaylistSection from '../PlaylistSection/PlaylistSection'
 
 export default class Main extends Component {
   render() {
@@ -12,7 +12,7 @@ export default class Main extends Component {
 
           <CommentSection />
 
-          <Playlist />
+          <PlaylistSection />
         </main>
       </div>
     );

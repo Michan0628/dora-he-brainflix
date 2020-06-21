@@ -1,0 +1,39 @@
+@import "../../styles/styles.scss";
+
+.commentCard {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $card-border;
+  display: flex;
+  justify-content: space-between;
+  &__body {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      width: 85%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    justify-self: flex-start;
+    margin-right: 1rem;
+  }
+  &__date {
+      font-size:1.5rem;
+    color: $text-subtitle-color;
+  }
+  &__text {
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: 1.4rem;
+    line-height:2rem;
+  }
+}

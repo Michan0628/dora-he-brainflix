@@ -1,15 +1,13 @@
 import React, { Component } from "react";
+import './style.scss'
+
 
 export default class Hero extends Component {
   render() {
     return (
-      <div>
-        <section className="hero">
-          <video src="" className="hero__video">
-            {/* VIDEO PLACEHOLDER */}
-          </video>
-        </section>
-      </div>
+        <video controls className='hero'>
+          <source src='./assets/Video/BrainStationSampleVideo.mp4' type='video/mp4' className='hero__video'/>
+        </video>
     );
   }
 }

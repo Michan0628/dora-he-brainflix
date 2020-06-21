@@ -1,0 +1,11 @@
+@import "../../styles/styles.scss";
+
+.playlist {
+  @include mobile-padding;
+  &__title{
+      margin:2em 0 1.5em 0;
+      font-size: 1.3em;
+      font-weight: 600;
+      color: $text-subtitle-color;
+  }
+}
