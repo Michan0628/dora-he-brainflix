@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentCardList from "../CommentCardList/CommentCardList";
 import Avatar from "../Avatar/Avatar";
-import "./CommentSection.scss";
+import "./style.scss";
 
 export default class CommentSection extends Component {
   render() {

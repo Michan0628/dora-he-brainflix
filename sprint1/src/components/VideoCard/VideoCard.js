@@ -12,10 +12,3 @@ export default function VideoCard(props) {
     </section>
   )
 }
-
-// {
-//   "id": 9,
-//   "title": "BMX Rampage: 2018 Highlights",
-//   "channel": "Red Cow",
-//   "image": "./assets/Images/video-list-0.jpg"
-// }

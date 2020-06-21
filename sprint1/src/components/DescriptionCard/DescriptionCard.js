@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./style.scss";
-import axios from 'axios'
+import axios from "axios";
 
 export default class DescriptionCard extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +11,7 @@ export default class DescriptionCard extends Component {
   }
   componentDidMount() {
     axios.get("./data.json").then((res) => {
-      this.setState({ description: res.data.mainVideo});
+      this.setState({ description: res.data.mainVideo });
     });
   }
 
@@ -30,26 +29,35 @@ export default class DescriptionCard extends Component {
 
   render() {
     return (
-
-        <section className="videoSection">
-          <section className="videoSection__header">
-            <h1 className="videoSection__header-title">{this.state.description.title}</h1>
-            <section className="videoSection__header-info">
-              <section className="videoSection__header-publish">
-                <p className="videoSection__channel">{this.state.description.channel}</p>
-                <p className="videoSection__time">{this.dateFormat(this.state.description.timestamp)}</p>
+      <section className="videoSection">
+        <section className="videoSection__header">
+          <h1 className="videoSection__header-title">
+            {this.state.description.title}
+          </h1>
+          <section className="videoSection__header-info">
+            <section className="videoSection__header-publish">
+              <p className="videoSection__channel">
+                {this.state.description.channel}
+              </p>
+              <p className="videoSection__time">
+                {this.dateFormat(this.state.description.timestamp)}
+              </p>
+            </section>
+            <section className="videoSection__stats">
+              <section className="videoSection__stats-views">
+                {this.state.description.views}
               </section>
-              <section className="videoSection__stats">
-                <section className="videoSection__stats-views">{this.state.description.views}</section>
-              
-                <section className="videoSection__stats-likes">{this.state.description.likes}</section>
+
+              <section className="videoSection__stats-likes">
+                {this.state.description.likes}
               </section>
             </section>
           </section>
-          <section className="videoSection__body">
-          {this.state.description.description}
-          </section>
         </section>
+        <section className="videoSection__body">
+          {this.state.description.description}
+        </section>
+      </section>
     );
   }
 }

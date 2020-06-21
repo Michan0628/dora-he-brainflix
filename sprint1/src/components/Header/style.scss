@@ -5,15 +5,15 @@
   flex-direction: column;
   @include mobile-padding;
 
-  @include tablet{
+  @include tablet {
     @include tablet-padding;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin:2em 0;
+    margin: 2em 0;
   }
 
-  @include desktop{
+  @include desktop {
     @include desktop-padding;
   }
 
@@ -21,16 +21,14 @@
     width: 100%;
     text-align: center;
     padding: 1.5em 0;
-    @include tablet{
+    @include tablet {
       text-align: start;
       width: 30%;
     }
 
-    @include desktop{
+    @include desktop {
       width: 50%;
     }
-
-
   }
   &__logo {
     width: 13em;
@@ -41,11 +39,11 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    @include tablet{
+    @include tablet {
       width: 60%;
       flex-wrap: nowrap;
     }
-    @include desktop{
+    @include desktop {
       width: 50%;
     }
     & > * {
@@ -55,7 +53,7 @@
   &__form {
     width: 100%;
     text-align: center;
-    @include tablet{
+    @include tablet {
       width: 55%;
     }
   }
@@ -81,16 +79,14 @@
     background-position: 70px 18px;
     background-repeat: no-repeat;
     width: 75%;
-    @include tablet{
+    @include tablet {
       width: 25%;
       padding: 1em 0 1em 1.5em;
       background-position: 15px 17px;
-
     }
 
-    @include desktop{
+    @include desktop {
       background-position: 20px 12px;
-
     }
   }
   &__avatar {

@@ -3,7 +3,7 @@
 .commentSection__form {
   display: flex;
   flex-direction: column;
-  @include tablet{
+  @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -14,43 +14,41 @@
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    @include tablet{
+    @include tablet {
       width: 100%;
     }
   }
   &-input {
-      width: 100%;
-      border: 2px solid $card-border;
-      background-color: $secondary-background-color;
-      border-radius: 5px;
-      margin-bottom: 2rem;
-      resize: none;
-      padding: 1rem 1rem 6rem;
-      
-      @include tablet{
-        width: 73%;
-        padding:1rem 1rem 1rem;
-        margin-bottom:0;
-        height: 55%;
-      }
+    width: 100%;
+    border: 2px solid $card-border;
+    background-color: $secondary-background-color;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    resize: none;
+    padding: 1rem 1rem 6rem;
 
-      &:focus {
-        border: 2px solid $primary-background-color;
-        outline: none;
-      }
-      &::placeholder {
-        color: $font-color;
-        font: 1.3rem $global-font;
-      }
-  
+    @include tablet {
+      width: 73%;
+      padding: 1rem 1rem 1rem;
+      margin-bottom: 0;
+      height: 55%;
     }
-    &-submit{
-        width: 100%;
-        @include tablet{
-          width: 25%;
-          height: 55%;
-          padding:0;
-        }
+
+    &:focus {
+      border: 2px solid $primary-background-color;
+      outline: none;
     }
+    &::placeholder {
+      color: $font-color;
+      font: 1.3rem $global-font;
+    }
+  }
+  &-submit {
+    width: 100%;
+    @include tablet {
+      width: 25%;
+      height: 55%;
+      padding: 0;
+    }
+  }
 }
-

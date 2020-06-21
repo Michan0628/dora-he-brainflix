@@ -18,11 +18,14 @@ export default class Hero extends Component {
 
   render() {
     return (
-
-      <video controls className='hero' poster={this.state.video.image} src={this.state.video.video}>
-        <source type='video/mp4' />
+      <video
+        controls
+        className="hero"
+        poster={this.state.video.image}
+        src={this.state.video.video}
+      >
+        <source type="video/mp4" />
       </video>
-
     );
   }
 }
