@@ -8,12 +8,15 @@
   }
 
   @include desktop{
-    @include desktop-padding;
+    margin-top:1em;
   }
   
   &__header {
     border-bottom: 1px solid $card-border;
     padding: 2em 0;
+    @include desktop{
+    padding:1em 0;
+    }
 
     &-title {
       font-size: 2.5rem;
@@ -75,6 +78,9 @@
       padding:2em 12em 2em 0;
       font-size:1.5rem;
       line-height: 2.5rem;
+    }
+    @include desktop{
+      padding:2em 5em 2em 0;
     }
   }
 }

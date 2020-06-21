@@ -27,15 +27,27 @@
     font-size: 1.5rem;
     justify-self: flex-start;
     margin-right: 1rem;
+
+    @include desktop{
+      font-size: 1.2rem;
+    }
   }
   &__date {
     font-size: 1.5rem;
     color: $text-subtitle-color;
+
+    @include desktop{
+      font-size: 1.2rem;
+    }
   }
   &__text {
     width: 100%;
     margin-top: 0.5em;
     font-size: 1.4rem;
     line-height: 2rem;
+    @include desktop{
+      font-size: 1.2rem;
+      line-height:1.5rem;
+    }
   }
 }

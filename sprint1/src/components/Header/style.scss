@@ -70,7 +70,10 @@
     background-image: url(./assets/Icon-search.svg);
     background-repeat: no-repeat;
     background-position: 10px 15px;
-    
+    &:focus {
+      border: 2px solid $primary-background-color;
+      outline: none;
+    }
   }
   &__button {
     padding: 1em 0em 1em 2em;
@@ -82,6 +85,11 @@
       width: 25%;
       padding: 1em 0 1em 1.5em;
       background-position: 15px 17px;
+
+    }
+
+    @include desktop{
+      background-position: 20px 12px;
 
     }
   }

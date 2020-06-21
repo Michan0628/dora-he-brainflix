@@ -1,0 +1,25 @@
+@import '../../styles/styles.scss';
+
+.main {
+  @include desktop {
+      display: flex;
+    }
+        &__grid1 {
+            @include desktop{
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                height: 100%;
+                padding-left:15rem;
+                border-right:1px solid $card-border;
+            }
+        }
+}
+
+.playlist{
+    @include desktop{
+        width: 40%;
+        // height: 100%;
+    }
+}
+
