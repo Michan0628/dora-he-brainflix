@@ -1,11 +1,34 @@
-import React from "react";
+import React, { Component } from 'react'
+import axios from 'axios'
 import VideoCard from '../VideoCard/VideoCard'
 
-export default function VideoCardList() {
-  return (
-    <section className="playlistCards">
-      <VideoCard />
-      <VideoCard />
-    </section>
-  );
+
+export default class VideoCardList extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        sideVideos:[]
+    }
 }
+
+componentDidMount(){
+  axios.get('./data.json')
+  .then(res => {
+      console.log(res.data.sideVideos)
+      this.setState({sideVideos: res.data.sideVideos})
+  })
+}
+
+  render() {
+    return (
+      <section className='playlistCards'>
+        
+        
+        {this.state.sideVideos.map(item => <VideoCard src={item.image} channel={item.channel} title={item.title} key={item.id}/>)}        
+        
+      </section>
+    )
+  }
+}
+
+

@@ -1,30 +1,54 @@
 import React, { Component } from "react";
 import "./style.scss";
+import axios from 'axios'
 
 export default class DescriptionCard extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      description: [],
+    };
+  }
+  componentDidMount() {
+    axios.get("./data.json").then((res) => {
+      console.log(res.data.mainVideo);
+      this.setState({ description: res.data.mainVideo});
+    });
+  }
+
+  dateFormat = (timestamp) => {
+    const dateObject = new Date(timestamp);
+    const date =
+      dateObject.getMonth() +
+      1 +
+      "/" +
+      dateObject.getDate() +
+      "/" +
+      dateObject.getFullYear();
+    return date;
+  };
+
   render() {
     return (
 
         <section className="videoSection">
           <section className="videoSection__header">
-            <h1 className="videoSection__header-title">BMX Rampage 2018 Highlights</h1>
+            <h1 className="videoSection__header-title">{this.state.description.title}</h1>
             <section className="videoSection__header-info">
               <section className="videoSection__header-publish">
-                <p className="videoSection__channel">By Red Cow</p>
-                <p className="videoSection__time">12/18/2018</p>
+                <p className="videoSection__channel">{this.state.description.channel}</p>
+                <p className="videoSection__time">{this.dateFormat(this.state.description.timestamp)}</p>
               </section>
               <section className="videoSection__stats">
-                <section className="videoSection__stats-views">1001023</section>
+                <section className="videoSection__stats-views">{this.state.description.views}</section>
               
-                <section className="videoSection__stats-likes">1001985</section>
+                <section className="videoSection__stats-likes">{this.state.description.likes}</section>
               </section>
             </section>
           </section>
           <section className="videoSection__body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam,
-            ad perspiciatis velit, corrupti nemo saepe est in sit, sapiente
-            dolor facere voluptatem? Ullam ducimus deleniti, minus quas rerum
-            perferendis quo?
+          {this.state.description.description}
           </section>
         </section>
     );
