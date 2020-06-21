@@ -4,7 +4,7 @@
   @include desktop {
     display: flex;
   }
-  &__grid1 {
+  &__devider {
     @include desktop {
       display: flex;
       flex-direction: column;

@@ -18,7 +18,7 @@ export default class VideoCardList extends Component {
 
   render() {
     return (
-      <section className="playlistCards">
+      <section className="playlist__cards playlistCards">
         {this.state.sideVideos.map((item) => (
           <VideoCard
             src={item.image}

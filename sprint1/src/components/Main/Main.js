@@ -7,16 +7,15 @@ import "./style.scss";
 export default class Main extends Component {
   render() {
     return (
-      <div>
+
         <main className="main">
-          <div className="main__grid1">
+          <div className="main__devider">
             <DescriptionCard />
             <CommentSection />
           </div>
 
           <PlaylistSection />
         </main>
-      </div>
     );
   }
 }
