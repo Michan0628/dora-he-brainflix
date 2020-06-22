@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import VideoButtons from "../VideoButtons/VideoButtons";
 import axios from "axios";
 import "./style.scss";
 
@@ -18,14 +19,17 @@ export default class Hero extends Component {
 
   render() {
     return (
-      <video
-        controls
-        className="hero"
-        poster={this.state.video.image}
-        src={this.state.video.video}
-      >
-        <source type="video/mp4" />
-      </video>
+      <div>
+        <video
+          // controls
+          className="hero"
+          poster={this.state.video.image}
+          src={this.state.video.video}
+        >
+          <source type="video/mp4" />
+        </video>
+        <VideoButtons />
+      </div>
     );
   }
 }
