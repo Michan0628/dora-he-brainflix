@@ -1,0 +1,15 @@
+@import "../../styles/styles.scss";
+
+.hero {
+  width: 100%;
+  margin: 1em 0;
+  @include tablet {
+    @include tablet-padding;
+    margin: 0 0 1em 0;
+    background-color: black;
+  }
+  @include desktop {
+    padding: 0 20rem;
+    margin: 0;
+  }
+}

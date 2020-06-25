@@ -1,0 +1,105 @@
+@import "../../styles/styles.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  @include mobile-padding;
+
+  @include tablet {
+    @include tablet-padding;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+  }
+
+  @include desktop {
+    @include desktop-padding;
+  }
+
+  &__left {
+    width: 100%;
+    text-align: center;
+    padding: 1.5em 0;
+    @include tablet {
+      text-align: start;
+      width: 30%;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+  &__logo {
+    width: 13em;
+  }
+  &__right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include tablet {
+      width: 60%;
+      flex-wrap: nowrap;
+    }
+    @include desktop {
+      width: 50%;
+    }
+    & > * {
+      margin: 0.5em 0;
+    }
+  }
+  &__form {
+    width: 100%;
+    text-align: center;
+    @include tablet {
+      width: 55%;
+    }
+  }
+  &__search {
+    padding: 15px 35px;
+    font-family: $global-font;
+    font-size: 15px;
+    border: 1px solid $card-border;
+    border-radius: 5px;
+    width: 100%;
+    background: $secondary-background-color;
+    background-image: url(./assets/Icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+    &:focus {
+      border: 2px solid $primary-background-color;
+      outline: none;
+    }
+  }
+  &__button {
+    // padding: 1em 0em 1em 2em;
+    // background-image: url(./assets/Icon-upload.svg);
+    // background-position: 70px 18px;
+    // background-repeat: no-repeat;
+    width: 75%;
+    @include tablet {
+      width: 25%;
+      padding: 1em 0 1em 1.5em;
+      background-position: 15px 17px;
+    }
+
+    @include desktop {
+      background-position: 20px 12px;
+    }
+
+    button{
+      background-image: url(./assets/Icon-upload.svg);
+      background-position: 55px 18px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-image: url(./assets/Mohan-muruge.jpg);
+    background-size: cover;
+  }
+}

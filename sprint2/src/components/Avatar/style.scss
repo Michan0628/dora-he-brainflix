@@ -1,0 +1,13 @@
+@import '../../styles/styles.scss';
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(./assets/Mohan-muruge.jpg);
+    background-size: cover;
+    @include desktop{
+      width: 40px;
+      height:40px;
+    }
+  }

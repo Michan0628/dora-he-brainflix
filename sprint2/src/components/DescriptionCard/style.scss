@@ -1,0 +1,84 @@
+@import "../../styles/styles.scss";
+
+.videoSection {
+  @include mobile-padding;
+
+  @include tablet {
+    @include tablet-padding;
+  }
+
+  @include desktop {
+    margin-top: 1em;
+  }
+
+  &__header {
+    border-bottom: 1px solid $card-border;
+    padding: 2em 0;
+    @include desktop {
+      padding: 1em 0;
+    }
+
+    &-title {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+    @include tablet {
+      &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-right: 2em;
+      }
+    }
+
+    &-publish {
+      display: flex;
+      font-size: 1.5rem;
+      margin: 1em 0;
+    }
+  }
+  &__channel {
+    font-weight: 600;
+    margin-right: 0.5em;
+  }
+
+  &__time {
+    color: $text-subtitle-color;
+  }
+  // LIKES AND VIEWS
+  &__stats {
+    display: flex;
+    font-size: 1.5rem;
+
+    &-views {
+      margin-right: 1em;
+      padding: 0.5em 0 0.5em 2em;
+      background-image: url(./assets/Icon-views.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 10px;
+    }
+    &-likes {
+      padding: 0.5em 0 0.5em 2em;
+      background-image: url(./assets/Icon-likes.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 10px;
+    }
+  }
+  //   DESCRIPTION
+  &__body {
+    padding: 2em 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    @include tablet {
+      padding: 2em 12em 2em 0;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+    @include desktop {
+      padding: 2em 5em 2em 0;
+    }
+  }
+}
