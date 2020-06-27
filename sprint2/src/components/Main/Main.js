@@ -4,18 +4,23 @@ import CommentSection from "../CommentSection/CommentSection";
 import PlaylistSection from "../PlaylistSection/PlaylistSection";
 import "./style.scss";
 
-export default class Main extends Component {
-  render() {
-    return (
 
-        <main className="main">
-          <div className="main__devider">
-            <DescriptionCard />
-            <CommentSection />
-          </div>
+export default function Main(props) {
+  return (
+    <main className="mainContent">
+      <div className="mainContent__devider">
+        <DescriptionCard
+          title={props.title}
+          channel={props.channel}
+          timestamp={props.timestamp}
+          views={props.views}
+          likes={props.likes}
+          description={props.description}
+        />
+        <CommentSection comment={props.comment} />
+      </div>
 
-          <PlaylistSection />
-        </main>
-    );
-  }
+      <PlaylistSection videoList={props.videoList} />
+    </main>
+  );
 }

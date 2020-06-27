@@ -2,11 +2,7 @@ import React from 'react'
 import './style.scss'
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams,
-    useRouteMatch
+    Link
   } from "react-router-dom";
 
 export default function Button(props) {

@@ -19,7 +19,7 @@ export default function CommentForm(props) {
         placeholder="Write comment here"
         className="userComment commentSection__form-input"
       ></textarea>
-      <Button className="commentSection__form-submit" text="COMMENT" />
+      <Button link='/' className="commentSection__form-submit" text="COMMENT" />
     </form>
   );
 }

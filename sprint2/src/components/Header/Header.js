@@ -1,14 +1,7 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
 import Button from "../Button/Button";
 import Avatar from "../Avatar/Avatar";
+import logo from '../../assets/Logo-brainflix.svg'
 import "./style.scss";
 
 
@@ -18,7 +11,7 @@ export default class Header extends Component {
       <div className="header">
         <div className="header__left">
           <img
-            src="./assets/Logo/Logo-brainflix.svg"
+            src={logo}
             alt="This is the logo of Brainflix"
             className="header__logo"
           />

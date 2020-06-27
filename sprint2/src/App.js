@@ -8,22 +8,24 @@ import {
   useParams,
   useRouteMatch
 } from "react-router-dom";
-import Home from './components/Home/Home';
+import Header from './components/Header/Header'
+
 import Upload from './components/Upload/Upload';
+import VideoPage from "./components/VideoPage/VideoPage";
 
 
 
 function App() {
   return (
     <Router>
+    <Header/>
     <div className="App">
       <Switch>
-        <Route path='/upload'>
-          <Upload />
-        </Route>
-        <Route path='/'>
-          <Home />
-        </Route>
+        <Route path='/videos/:id' component={VideoPage} />
+
+        <Route path='/upload' component={Upload} />
+        <Route path='/' component={VideoPage} />
+
       </Switch>
     </div>
     </Router>

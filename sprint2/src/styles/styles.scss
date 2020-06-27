@@ -1,8 +1,8 @@
 // exports all shared partials
-@import 'mixins';
-@import 'variables';
-@import 'fonts';
-@import 'color';
+@import 'partials/color';
+@import 'partials/fonts';
+@import 'partials/mixins';
+@import 'partials/variables';
 
 // resets
 
