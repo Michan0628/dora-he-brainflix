@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import VideoButtons from "../VideoButtons/VideoButtons";
+import './style.scss'
 
 export default class MainVideo extends Component {
   constructor(props) {
@@ -7,10 +8,12 @@ export default class MainVideo extends Component {
   }
   render() {
     return (
-      <div className="videoPage__mainVideo">
+      <div className="mainVideoSection videoPage__mainVideo">
         <video
-          className="hero"
+          controls
+          className="mainVideoSection__video"
           poster={this.props.image}
+          src={this.props.src}
         >
           <source type="video/mp4" />
         </video>

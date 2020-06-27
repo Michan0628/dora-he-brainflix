@@ -6,11 +6,21 @@ import {
 } from "react-router-dom";
 import "./style.scss";
 
+
 export default function PlaylistSection(props) {
-  let videoToRender;
   
+  function filterMain(item ){
+    return item.id !== props.mainVideoId;
+  }
+  
+  if(props.mainVideoId){
+    console.log('get the main video id',props.mainVideoId)
+  }
+
+  let videoToRender;
   if (props.sideVideo) {
-    videoToRender = props.sideVideo.map((item) => {
+    let filterVideo = props.sideVideo.filter(filterMain)
+    videoToRender = filterVideo.map((item) => {
       return (
         <Link key={item.id} to={`/videos/${item.id}`}>
           <VideoCard

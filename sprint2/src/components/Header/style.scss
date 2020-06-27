@@ -77,25 +77,27 @@
     width: 75%;
     @include tablet {
       width: 25%;
-      padding: 1em 0 1em 1.5em;
-      background-position: 15px 17px;
     }
 
-    @include desktop {
-      background-position: 20px 12px;
-    }
+    
 
     button{
       background-image: url(../../assets/Icon-upload.svg);
       background-position: 55px 18px;
       background-repeat: no-repeat;
+      @include tablet{
+        background-position: 15px 17px;
+      }
+      @include desktop {
+        background-position: 18px 12px;
+        padding-right:15px;
+      }
     }
   }
   &__avatar {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-image: url(../../assets/Mohan-muruge.jpg);
     background-size: cover;
   }
 }

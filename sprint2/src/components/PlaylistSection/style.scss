@@ -1,16 +1,18 @@
 @import "../../styles/styles.scss";
 
 .playlist {
-  @include mobile-padding;
 
+  @include mobile-padding;
   @include tablet {
     @include tablet-padding;
     padding-right: 40em;
   }
   @include desktop {
-    padding: 0 15rem 0 2rem;
+    padding: 0 0rem 0 2rem;
   }
-
+  a{
+    color:$font-color
+  }
   &__title {
     margin: 2em 0 1.5em 0;
     font-size: 1.3em;
