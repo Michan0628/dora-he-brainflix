@@ -1,0 +1,140 @@
+@import "../../styles/styles.scss";
+
+.uploadSection {
+  @include mobile-padding;
+  border-top: 1px solid $card-border;
+  margin-top: 1em;
+  &__title {
+    font-size: 2.5rem;
+    margin: 1em 0;
+    @include tablet {
+      padding-bottom: 1em;
+      border-bottom: 2px solid $card-border;
+    }
+    @include desktop{
+      font-size: 3rem;
+    }
+  }
+  @include tablet {
+    @include tablet-padding;
+  }
+  @include desktop {
+    @include desktop-padding;
+  }
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  @include desktop{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+  &__group1{
+    @include tablet{
+      width: 50%;
+    }
+    @include desktop{
+      width: 35%;
+      height: 100%;
+    }
+  }
+  &__group2{
+    @include desktop{
+      margin-bottom:1em;
+    }
+  }
+  &__segment{
+    @include tablet{
+
+      padding-bottom: 2em;
+      margin-bottom: 4em;
+      border-bottom: 2px solid $card-border;
+    }
+    @include desktop{
+      display: flex;
+      flex-direction: column;
+      border-bottom:0;
+      width: 60%;
+      margin-bottom:0;
+    }
+  }
+
+  &__label {
+    color: $text-subtitle-color;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+  &__input {
+    border: 2px solid $card-border;
+    background-color: $secondary-background-color;
+    border-radius: 5px;
+    padding: 1.5rem 1rem;
+    &::placeholder {
+      color: $font-color;
+      font: 1.5rem $global-font;
+    }
+    &:focus {
+      border: 2px solid $primary-background-color;
+      outline: none;
+    }
+  }
+  &__txtArea {
+    border: 2px solid $card-border;
+    background-color: $secondary-background-color;
+    border-radius: 5px;
+    resize: none;
+    padding: 1rem 1rem 6rem;
+    @include tablet {
+      padding-bottom: 12rem;
+    }
+    @include tablet {
+      padding-bottom: 4.5rem;
+    }
+    &:focus {
+      border: 2px solid $primary-background-color;
+      outline: none;
+    }
+    &::placeholder {
+      color: $font-color;
+      font: 1.5rem $global-font;
+    }
+  }
+
+  &__buttons{
+    @include tablet{
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      & > *{
+        margin:0 1em;
+      }
+
+    }
+    @include desktop{
+      border-top:2px solid $card-border;
+      padding-top:4em;
+    }
+  }
+
+  &__cancel button {
+    background-color: white;
+    color: $button-main;
+    @include desktop{
+      padding:1em 4em;
+    }
+  }
+  &__submit button{
+    @include desktop{
+      padding:1.5em 4em;
+    }
+  }
+}

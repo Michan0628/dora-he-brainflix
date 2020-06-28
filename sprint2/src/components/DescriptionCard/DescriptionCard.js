@@ -1,5 +1,8 @@
 import React from "react";
 import "./style.scss";
+import {
+  withRouter
+} from "react-router-dom";
 
 function dateFormat(timestamp) {
   const dateObject = new Date(timestamp);
@@ -13,7 +16,7 @@ function dateFormat(timestamp) {
   return date;
 };
 
-export default function DescriptionCard(props) {
+function DescriptionCard(props) {
   return (
       <section className="videoSection">
         <section className="videoSection__header">
@@ -46,3 +49,5 @@ export default function DescriptionCard(props) {
       </section>
     )
 }
+
+export default withRouter(DescriptionCard)

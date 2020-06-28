@@ -1,7 +1,10 @@
 import React from 'react'
+import {
+  withRouter
+} from "react-router-dom";
 import './style.scss';
 
-export default function VideoCard(props) {
+function VideoCard(props) {
   return (
     <section className="playlistCard">
       <img src={props.src} alt="This is thumbnail of video" className='playlistCard__thumbnail'/>
@@ -12,3 +15,5 @@ export default function VideoCard(props) {
     </section>
   )
 }
+
+export default withRouter(VideoCard);

@@ -87,10 +87,10 @@
       background-repeat: no-repeat;
       @include tablet{
         background-position: 15px 17px;
+        padding:1em 0 1em 1em;
       }
       @include desktop {
         background-position: 18px 12px;
-        padding-right:15px;
       }
     }
   }

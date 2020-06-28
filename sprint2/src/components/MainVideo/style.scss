@@ -8,6 +8,7 @@
     @include tablet-padding;
     margin: 0 0 1em 0;
     background-color: black;
+    height:38vh;
   }
   @include desktop {
       height: 50vh;

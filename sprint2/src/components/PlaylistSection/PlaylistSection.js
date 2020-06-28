@@ -2,12 +2,12 @@ import React from "react";
 import VideoCard from "../VideoCard/VideoCard";
 import {
   BrowserRouter as Router,
-  Link
+  Link,
+  withRouter
 } from "react-router-dom";
 import "./style.scss";
 
-
-export default function PlaylistSection(props) {
+function PlaylistSection(props) {
   
   function filterMain(item ){
     return item.id !== props.mainVideoId;
@@ -43,3 +43,5 @@ export default function PlaylistSection(props) {
     </section>
   );
 }
+
+export default withRouter(PlaylistSection)

@@ -1,8 +1,11 @@
 import React from "react";
+import {
+  withRouter
+} from "react-router-dom";
 import Avatar from "../Avatar/Avatar";
 import "./style.scss";
 
-export default function CommentCard(props) {
+function CommentCard(props) {
   return (
     <section className="commentCard">
       <Avatar className="commentCard__avatar" />
@@ -17,3 +20,5 @@ export default function CommentCard(props) {
     </section>
   );
 }
+
+export default withRouter(CommentCard)

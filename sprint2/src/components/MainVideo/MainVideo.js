@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
+import {
+  withRouter
+} from "react-router-dom";
 import VideoButtons from "../VideoButtons/VideoButtons";
 import './style.scss'
 
-export default class MainVideo extends Component {
+class MainVideo extends Component {
   constructor(props) {
     super(props);
   }
@@ -22,3 +25,4 @@ export default class MainVideo extends Component {
     );
   }
 }
+export default withRouter(MainVideo);

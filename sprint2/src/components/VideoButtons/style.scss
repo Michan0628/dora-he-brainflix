@@ -12,11 +12,11 @@
   top: 32em;
   left: 1em;
   @include tablet {
-    top: 45em;
-    left: 3em;
+    top: 43em;
+    left: 4em;
   }
   @include desktop {
-    top: 48em;
+    top: 50em;
     left: 23em;
   }
 }
@@ -31,11 +31,11 @@
   top: 32em;
   right: 1em;
   @include tablet {
-    top: 45em;
-    right: 3em;
+    top: 43em;
+    right: 4em;
   }
   @include desktop {
-    top: 48em;
+    top: 50em;
     right: 23em;
   }
 }

@@ -1,4 +1,7 @@
 import React from "react";
+import {
+  withRouter
+} from "react-router-dom";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentCard from "../CommentCard/CommentCard";
 import Avatar from "../Avatar/Avatar";
@@ -16,7 +19,7 @@ function dateFormat(timestamp) {
   return date;
 }
 
-export default function CommentSection(props) {
+function CommentSection(props) {
   
   let commentToRender;
   if (props.comments) {
@@ -45,3 +48,5 @@ export default function CommentSection(props) {
     </section>
   );
 }
+
+export default withRouter(CommentSection)
