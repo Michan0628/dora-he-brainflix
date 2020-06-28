@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import {
-  withRouter
-} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import CommentSection from "../CommentSection/CommentSection";
 import PlaylistSection from "../PlaylistSection/PlaylistSection";
 import DescriptionCard from "../DescriptionCard/DescriptionCard";
@@ -28,13 +26,14 @@ class VideoPage extends Component {
   }
 
   componentDidUpdate(prevState, prevProps) {
-    
-    if ( this.props.match.params.id !== prevState.match.params.id) {
+    if (this.props.match.params.id !== prevState.match.params.id) {
       this.getMainVideo(this.props.match.params.id);
-      
+      if (this.props.match.path === "/") {
+        this.getMainVideo("1af0jruup5gu");
+      }
     }
-    console.log('this is did update this.props',this.props)
-    console.log('this is routeProps', this.props.routeProps)
+    console.log("this is did update this.props", this.props);
+    console.log("this is routeProps", this.props.routeProps);
     console.log("this is did update prevProps", prevProps);
     console.log("this is did update prevState", prevState);
   }
