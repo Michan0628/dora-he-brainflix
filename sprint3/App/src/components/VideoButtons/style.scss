@@ -1,0 +1,55 @@
+@import "../../styles/styles.scss";
+
+.playButton {
+  height: 40px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: rgba(33, 32, 32, 0.7);
+  background-image: url(../../assets/Icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 32em;
+  left: 1em;
+  @include tablet {
+    top: 43em;
+    left: 4em;
+  }
+  @include desktop {
+    top: 50em;
+    left: 23em;
+  }
+}
+.videoButtons__right {
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: rgba(33, 32, 32, 0.7);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 32em;
+  right: 1em;
+  @include tablet {
+    top: 43em;
+    right: 4em;
+  }
+  @include desktop {
+    top: 50em;
+    right: 23em;
+  }
+}
+.fullScreen {
+  height: 40px;
+  width: 50px;
+  background-image: url(../../assets/Icon-fullscreen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.volume {
+  height: 40px;
+  width: 50px;
+  background-image: url(../../assets/Icon-volume.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

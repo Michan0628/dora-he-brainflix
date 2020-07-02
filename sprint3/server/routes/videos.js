@@ -12,7 +12,7 @@ router.get("/:id", (req, res) => {
   const found = videos.some((video) => video.id === req.params.id);
 
   if (found) {
-    res.json(videos.filter((video) => video.id === req.params.id));
+    res.json(videos.filter((video) => video.id === req.params.id)[0]);
   } else {
     // if the id does not exist
     res
@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const newVideo = {
     id: uuid.v4(),
-    name: req.body.title,
+    title: req.body.title,
     channel: 'Best channel',
     image: req.body.image,
     description: req.body.description,

@@ -1,0 +1,46 @@
+// exports all shared partials
+@import 'partials/color';
+@import 'partials/fonts';
+@import 'partials/mixins';
+@import 'partials/variables';
+
+// resets
+
+// Border box
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  // Remove margin, padding and border from everything
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%;
+  }
+  
+  // set up
+  html {
+    font: 62.5% $global-font;
+    color: $font-color;
+  }
+  body {
+    background-color: #fff;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  

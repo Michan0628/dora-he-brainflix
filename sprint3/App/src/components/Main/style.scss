@@ -1,0 +1,23 @@
+@import "../../styles/styles.scss";
+
+.mainContent {
+  @include desktop {
+    display: flex;
+  }
+  &__devider {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      height: 100%;
+      padding-left: 15rem;
+      border-right: 1px solid $card-border;
+    }
+  }
+}
+
+.playlist {
+  @include desktop {
+    width: 40%;
+  }
+}
