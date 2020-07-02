@@ -15,14 +15,15 @@ class VideoPage extends Component {
     this.state = {
       mainVideo: {},
       sideVideo: [],
+      videos:[]
     };
   }
   componentDidMount() {
     console.log("this is did mount", this.props.match);
-    // if(this.props.match.url==='/'){
-    // }
+  
     this.getMainVideo("1af0jruup5gu");
     this.getSideVideo();
+   
   }
 
   componentDidUpdate(prevState, prevProps) {
@@ -32,15 +33,15 @@ class VideoPage extends Component {
         this.getMainVideo("1af0jruup5gu");
       }
     }
-    console.log("this is did update this.props", this.props);
-    console.log("this is routeProps", this.props.routeProps);
-    console.log("this is did update prevProps", prevProps);
-    console.log("this is did update prevState", prevState);
+    // console.log("this is did update this.props", this.props);
+    // console.log("this is routeProps", this.props.routeProps);
+    // console.log("this is did update prevProps", prevProps);
+    // console.log("this is did update prevState", prevState);
   }
 
   getMainVideo = (videoId) => {
     axios
-      .get(`https://project-2-api.herokuapp.com/videos/${videoId}${API_KEY}`)
+      .get(`http://localhost:8080/videos/${videoId}`)
       .then((res) => {
         this.setState({ mainVideo: res.data });
       })
@@ -51,7 +52,7 @@ class VideoPage extends Component {
 
   getSideVideo = () => {
     axios
-      .get(`https://project-2-api.herokuapp.com/videos${API_KEY}`)
+      .get(`http://localhost:8080/videos`)
       .then((res) => {
         this.setState({ sideVideo: res.data });
       })
