@@ -72,4 +72,8 @@ router.post("/", (req, res) => {
   res.json(videos);
 });
 
+// Delet a video
+
+
+
 module.exports = router;
