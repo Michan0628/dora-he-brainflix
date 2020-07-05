@@ -137,4 +137,9 @@
       padding:1.5em 4em;
     }
   }
+  &__publish{
+    @include tablet{
+      width: 18%;
+    }
+  }
 }
