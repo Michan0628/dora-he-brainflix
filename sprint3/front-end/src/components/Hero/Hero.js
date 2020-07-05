@@ -1,6 +1,5 @@
 import React from "react";
 import VideoButtons from "../VideoButtons/VideoButtons";
-import axios from "axios";
 import "./style.scss";
 
 
