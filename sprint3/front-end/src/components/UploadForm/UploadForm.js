@@ -12,11 +12,12 @@ export default class UploadForm extends Component {
     axios.post('http://localhost:8080/videos',{
       title: videoTitle,
       description: videoDescription,
-      image:'https://i.imgur.com/5qyCZrD.jpg'
+      image:'https://i.imgur.com/Pr6lP45.jpg'
     })
     .then(res=>{
       console.log(res.data)
     })
+    event.target.reset();
     
   };
 
